@@ -1,0 +1,25 @@
+{
+  "name": "10-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrenadams/10-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrenadams/10-homework/issues"
+  },
+  "homepage": "https://github.com/mrenadams/10-homework#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.2.0",
+    "mysql": "^2.18.1"
+  }
+}
