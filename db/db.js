@@ -39,7 +39,32 @@ class DB {
         )
     }
 
-    //you will need to qrite other queries
+    findAllDepartments() {
+        return this.connection.query(
+            //sql query added
+            `
+            SELECT department.id, department.name AS department FROM role LEFT JOIN department on role.department_id = department.id;
+
+            `
+        );
+    }
+
+    // Update the given employee's role
+    updateEmployeeRole(employeeId, roleId) {
+        return this.connection.query(
+            "UPDATE employee SET role_id = ? WHERE id = ?",
+            [roleId, employeeId]
+        );
+    }
+
+    // Remove an employee with the given id
+    removeEmployee(employeeId) {
+        return this.connection.query(
+            "DELETE FROM employee WHERE id = ?",
+            employeeId
+        );
+    }
+
 }
 
 module.exports = new DB(connection);

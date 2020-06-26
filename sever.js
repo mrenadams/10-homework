@@ -174,3 +174,36 @@ async function addEmployee() {
 
     askQuestions();
 }
+
+async function viewRoles() {
+    //get table
+    const role = await db.findAllRoles(); //array of obj called row data packets
+
+    //make pretty table
+    console.table(role);
+
+    //asks the questions once more
+    askQuestions();
+}
+
+async function viewDepartments() {
+    //get table
+    const department = await db.findAllDepartments(); //array of obj called row data packets
+
+    //make pretty table
+    console.table(department);
+
+    //asks the questions once more
+    askQuestions();
+}
+
+async function updateEmployeeRole() {
+    //get table
+    const employees = await db.updateEmployeeRole(); //array of obj called row data packets
+
+    //make pretty table
+    console.table(employees);
+
+    //asks the questions once more
+    askQuestions();
+}
